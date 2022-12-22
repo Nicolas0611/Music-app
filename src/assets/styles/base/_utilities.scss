@@ -1,0 +1,12 @@
+@use "variables" as v;
+
+.text-center {
+  text-align: center;
+}
+.bg {
+  min-height: 100vh;
+  background-color: v.$background;
+}
+.text {
+  color: v.$white;
+}

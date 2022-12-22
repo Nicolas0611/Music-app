@@ -1,0 +1,41 @@
+@use "variables" as v;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: v.$font;
+  font-size: 1.6rem;
+  color: v.$white;
+}
+.container {
+  width: 95%;
+  max-width: 154rem;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+select {
+  border: 0px;
+  outline: 0px;
+}
