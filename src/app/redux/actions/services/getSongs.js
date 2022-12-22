@@ -1,4 +1,5 @@
 import axios from "axios";
+import image from "../../../../assets/img/image.png";
 
 const options = {
   method: "GET",
@@ -15,15 +16,17 @@ export const getSongs = async () => {
     .request(options)
     .then(function (response) {
       const data = response.data;
+      console.log(data);
+
       data.forEach((song) => {
         songs.push({
           title: song.title,
           subtitle: song.subtitle,
           type: song.type,
-          cover: song.images.coverart,
-          imageArtist: song.images.background,
-          artists: song.artists,
-          song: song.hub.actions[1].uri,
+          cover: song.images?.coverart || image,
+          imageArtist: song.images?.background,
+          artists: song?.artists,
+          song: song.hub.actions?.[1].uri,
           id: song.key,
         });
       });
